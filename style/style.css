@@ -1,0 +1,124 @@
+* {
+    margin: 0; /* Enlève les marges par défaut */
+    padding: 0; /* Enlève les paddings par défaut */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif; /* Police d'écriture */
+}
+
+.pannel {
+    display : flex; /* On utilise la propriété flexbox pour mettre les éléments sur la même ligne */
+    justify-content: center; /* Permet de mettre les éléments sur la même ligne et de les espacer */
+    padding: 5px; /* Espace autour du panneau */
+    background-color: #FEFEDC;
+}
+
+.pannel-logo img {
+    width : 40px;
+    height : 40px;
+    border-radius: 50%; /* rend l'image circulaire */
+    display: flex; /* Permet de centrer l'image */
+    justify-content: center; /* Permet de centrer l'image */
+    align-items: center; /* Permet de centrer l'image */
+    /*Je veux déplacer l'image de 10px vers le bas et de 5px vers la droite */
+    transform: translate(-40px, 10px); /* translate(x, y) permet de déplacer l'élément de x pixels vers la droite et de y pixels vers le bas */
+}
+
+.pannel-links {
+    display: flex; /* Utilise la boîte flexbox pour aligner les liens horizontalement */
+    gap: 20px; /* Espace entre les liens */
+    align-items: center; /* Permet de centrer les éléments sur l'axe vertical */
+}
+
+.pannel-links a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: black; /* Couleur du texte des liens (modifiez cette couleur selon vos préférences) */
+    padding: 10px 20px; /* Espace autour du texte des liens */
+}
+
+.pannel-button {
+    /* Nous allons effacer les styles par défaut du bouton */
+    border: none;
+    background-color: transparent;
+    cursor: pointer; /* Change le curseur de la souris au survol du bouton */
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;    
+    padding : 20px;
+}
+
+
+.main {
+    background-image: url('../image/botw.avif');
+    background-position: center center; /* Permet de centrer l'image de fond, il y a deux center car le premier est pour l'axe horizontal et le second pour l'axe vertical */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Permet de fixer l'image de fond lorsqu'on défile*/
+    background-size: cover; /* Permet de couvrir tout le bloc */
+    height: 100vh; /* Si on met juste 100%, ça va chercher celui du parent, donc avec vh, ça lui dit de prendre toute la hauteur de l'écran */
+    width: 100%;
+    position: relative; /* Remplacé 'absolute' par 'relative' */
+
+    /*Flexbox*/
+    display: flex;
+    justify-content: center; /* Permet de centrer les éléments sur l'axe horizontal */
+    align-items: center; /* Permet de centrer les éléments sur l'axe vertical */
+}
+
+.main-description {
+    position : center;
+    text-align: center;
+    color : white;
+    text-shadow: 2px 2px 2px black;
+    width : calc(100% - 2*50px);
+    margin: auto; /* Permet de centrer le bloc */
+    font-size: 14px;
+}
+
+.list {
+    /*Flexbox*/
+    display: grid;
+    grid-template-columns: auto 500px; /* Permet de diviser le bloc en deux colonnes */
+    background-color: #E9FECE;
+    height: 100vh;
+}
+
+.left-image {
+    display : flex;
+    flex-direction: column; /* Permet de mettre les éléments sur la même colonne */
+    justify-content: center; /* Permet de centrer les éléments sur l'axe horizontal */
+    align-items: center; /* Permet de centrer les éléments sur l'axe vertical */
+}
+
+.begin-list {
+    display: flex;
+    align-items: top; /* Permet de centrer les éléments sur l'axe vertical */
+    justify-content: center; /* Permet de centrer les éléments sur l'axe horizontal */
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+.reasons-list {
+    display : flex; /* Permet de mettre les éléments sur la même ligne */
+    padding : 30px; /* Permet de mettre de l'espace entre les éléments */
+    font-size: 20px;
+    color : black;
+    margin-left : 30px;
+}
+
+.reasons-list li {
+    margin-bottom: 10px; /* Permet de mettre de l'espace entre les éléments */
+}
+
+.right-image {
+    margin : 30px;
+    background-image: url('../image/sword.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 2; /* Permet de placer l'image dans la troisième colonne */
+}
+
+
